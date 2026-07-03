@@ -281,3 +281,69 @@ button:hover {
     transform: scale(1) translateY(0);
   }
 }
+.mascot {
+  position: fixed;
+  right: 42px;
+  bottom: 95px;
+  width: 165px;
+  z-index: 80;
+  transform-origin: bottom center;
+  filter: drop-shadow(0 25px 45px rgba(0,0,0,0.45));
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mascot.wave {
+  animation: mascotWave 1.4s ease-in-out infinite;
+}
+
+.mascot.think {
+  animation: mascotThink 1.8s ease-in-out infinite;
+}
+
+.mascot.focus {
+  animation: mascotFocus 1.6s ease-in-out infinite;
+}
+
+.mascot.bounce {
+  animation: mascotBounce 1.2s ease-in-out infinite;
+}
+
+.mascot.point {
+  animation: mascotPoint 1.3s ease-in-out infinite;
+}
+
+.mascot.victory {
+  animation: mascotVictory 1.2s ease-in-out infinite;
+}
+
+@keyframes mascotWave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes mascotThink {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(-6deg) translateY(-8px); }
+}
+
+@keyframes mascotFocus {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes mascotBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes mascotPoint {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(-12px) rotate(-4deg); }
+}
+
+@keyframes mascotVictory {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.12) rotate(-4deg); }
+}
